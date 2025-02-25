@@ -1,0 +1,92 @@
+.main-paragraph-counter-template{
+    width: 100%;
+    padding: 20px 0;
+}
+.main-paragraph-counter-title{
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+.main-paragraph-counter-title h1{
+    font-size: 30px;
+    margin: 0;
+    padding: 10px;
+}
+.dark_mode .main-paragraph-counter-title h1 {
+    color: #fff;
+}
+
+.main-paragraph-counter-title p{
+    font-size: 16px;
+    display: block;
+    margin-bottom: 15px;
+}
+.dark_mode .main-paragraph-counter-title p{
+    color: #fff;
+}
+.main-paragraph-counter-wrapper{
+    width: 80%;
+    background-color: rgba(50, 50, 93, 0.1);
+    padding: 20px;
+    box-shadow: 0 0 5px #666;
+    border-radius: 4px;
+    margin: auto;
+}
+.paragraph-counter-input{
+    margin-bottom: 10px;
+}
+.paragraph-counter-input textarea{
+    width: 100%;
+    max-height: 200px;
+    min-height: 200px;
+    padding: 20px;
+    font-size: 16px;
+    border: 1px solid #CCC;
+    border-radius: 10px;
+    outline: none;
+}
+.paragraph-counter-btn{
+    text-align: center;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.paragraph-counter-btn button{
+    font-size: 20px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    background: rgb(38,170,38);
+    background: linear-gradient(90deg, rgba(38,170,38,1) 0%, rgba(31,236,65,1) 50%, rgba(50,193,55,1) 87%);
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+.paragraph-counter-output{
+    width: 100%;
+    background-color: #0000001a;
+    display: inline-block;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.paragraph-counter-output #result p{
+    padding: 5px 10px;
+}
+.paragraph-counter-output textarea{
+    width: 100%;
+    max-height: 200px;
+    min-height: 200px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #CCC;
+    border-radius: 10px;
+    outline: none;
+}
+.dark_mode .main-paragraph-counter-box textarea{
+    background-color: #fff;
+    border: 1px solid #000;
+    color: #000;
+}
+.main-paragraph-counter-box textarea::placeholder {
+    font-size: 13px;
+}

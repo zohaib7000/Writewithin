@@ -1,0 +1,103 @@
+.main-line-counter-template{
+    width: 100%;
+    padding: 20px 0;
+}
+.main-line-counter-title{
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+.main-line-counter-title h1{
+    font-size: 30px;
+    margin: 0;
+    padding: 10px;
+}
+.dark_mode .main-line-counter-title h1 {
+    color: #fff;
+}
+
+.main-line-counter-title p{
+    font-size: 16px;
+    display: block;
+    margin-bottom: 15px;
+}
+.dark_mode .main-line-counter-title p{
+    color: #fff;
+}
+.main-line-counter-wrapper{
+    width: 80%;
+    background-color: rgb(214 214 214 / 10%);
+    padding: 20px;
+    border-radius: 4px;
+    margin: auto;
+    border: 1px solid #d6d6d6;
+}
+.line-counter-input{
+    margin-bottom: 10px;
+}
+.line-counter-input textarea{
+    width: 100%;
+    max-height: 200px;
+    min-height: 200px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    outline: none;
+}
+.line-counter-btn{
+    text-align: center;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 10px 0;
+}
+.line-counter-btn button{
+    font-size: 12px;
+    padding: 7px 15px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    background: rgb(38, 170, 38);
+    background: linear-gradient(118deg, rgb(61 29 122) 20%, rgb(29 152 148) 50%);
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 2px;
+}
+.line-counter-output{
+    width: 100%;
+    background-color: #0000001a;
+}
+.line-counter-output #result p{
+    padding: 5px 10px;
+}
+.line-counter-output textarea{
+    width: 100%;
+    max-height: 200px;
+    min-height: 200px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #CCC;
+    border-radius: 10px;
+    outline: none;
+}
+.dark_mode .main-line-counter-box textarea{
+    background-color: #fff;
+    border: 1px solid #000;
+    color: #000;
+}
+.main-line-counter-box textarea::placeholder {
+    font-size: 13px;
+}
+#count{
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    box-shadow: rgb(221 237 238) 0px 1px 6px 0px inset, rgba(255, 255, 255, .9) 2px -3px 10px 10px inset;
+    background-color: #fff;
+    /* border-radius: 2px; */
+    border-left: 5px solid rgb(200 71 38);
+}
+#lineNumbers ol{
+    list-style-position: inside;
+}
