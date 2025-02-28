@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $("#countButton").click(function(){
         let text = $("#textInput").val().trim();
-
+        $('.sentence-counter-output').css("display", "block");
         // Sentence count (based on punctuation)
         let sentences = text.match(/[^.!?]+[.!?]+/g);
         let sentenceCount = sentences ? sentences.length : 0;
@@ -24,5 +24,7 @@ $(document).ready(function(){
             <p><strong>Paragraphs:</strong> ${paragraphCount}</p>
             <p><strong>Characters:</strong> ${charCount}</p>
         `);
+
+        
     });
 });

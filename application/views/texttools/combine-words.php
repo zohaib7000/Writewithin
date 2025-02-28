@@ -3,7 +3,7 @@
 <head>
     <title>Combine Words</title>
     <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content="combine words, combo words, combine word generator, mix word, word merger, combine two words, join two words, put two words together, words that combine two words, letter combiner generator, combine two words into one, mix word generator, mix words up generator, two words into one, blend together crossword clue, mix letters to make a word, two words that go together, word combiner online, put words together, blend two words together, combine letters to make a word, put the words together, 2 words put together, combine two words to make one, combine words list  ">
     <?php
       $this->load->view('include/headFiles.php');
       ?>

@@ -55,6 +55,7 @@ $route['default_controller'] = 'Main';
 $route['korean-keyboard']           	= 'Main/koreankeyboard_view';
 $route['chinese-keyboard']           	= 'Main/chinesekeyboard_view';
 $route['japanese-keyboard']           	= 'Main/japanesekeyboard_view';
+$route['italian-keyboard']           	= 'Main/italiankeyboard_view';
 $route['combine-words']           		= 'Main/combinewords_view';
 $route['sentence-counter']           	= 'Main/sentencecounter_view';
 $route['paragraph-counter']           	= 'Main/paragraphcounter_view';

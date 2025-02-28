@@ -1,7 +1,6 @@
 $(document).ready(function () {
     let inputField = $(".inputText_keyboard");
 
-    // Handle layout change
     $("input[name='keyboard-layout']").change(function () {
         $(".keyboard-container > div").hide();
         $("." + $(this).val()).show();
@@ -30,10 +29,158 @@ $(document).ready(function () {
                 $("." + activeLayout + " .key[data-key='s'] p").text("づ");
                 $("." + activeLayout + " .key[data-key='d'] p").text("ど");
                 $("." + activeLayout + " .key[data-key='f'] p").text("だ");
+                $("." + activeLayout + " .key[data-key='j'] p").text("だ");
+                $("." + activeLayout + " .key[data-key='k'] p").text("ど");
+                $("." + activeLayout + " .key[data-key='l'] p").text("で");
+                return;
+            }
+            else if (key === "e") {
+                $("." + activeLayout + " .key p").text("");
+                $("." + activeLayout + " .key[data-key='a'] p").text("り");
+                $("." + activeLayout + " .key[data-key='s'] p").text("る");
+                $("." + activeLayout + " .key[data-key='d'] p").text("ろ");
+                $("." + activeLayout + " .key[data-key='f'] p").text("ら");
+                $("." + activeLayout + " .key[data-key='j'] p").text("ら");
+                $("." + activeLayout + " .key[data-key='k'] p").text("ろ");
+                $("." + activeLayout + " .key[data-key='l'] p").text("れ");
                 return;
             }
 
-            if (key === "a" || key === "s" || key === "d" || key === "f") {
+            else if (key === "r") {
+                $("." + activeLayout + " .key p").text("");
+                $("." + activeLayout + " .key[data-key='a'] p").text("し");
+                $("." + activeLayout + " .key[data-key='s'] p").text("す");
+                $("." + activeLayout + " .key[data-key='d'] p").text("そ");
+                $("." + activeLayout + " .key[data-key='f'] p").text("さ");
+                $("." + activeLayout + " .key[data-key='j'] p").text("さ");
+                $("." + activeLayout + " .key[data-key='k'] p").text("そ");
+                $("." + activeLayout + " .key[data-key='l'] p").text("せ");
+                return;
+            }
+
+            else if (key === "y") {
+                $("." + activeLayout + " .key p").text("");
+                $("." + activeLayout + " .key[data-key='a'] p").text("ひ");
+                $("." + activeLayout + " .key[data-key='s'] p").text("ふ");
+                $("." + activeLayout + " .key[data-key='d'] p").text("ほ");
+                $("." + activeLayout + " .key[data-key='f'] p").text("は");
+                $("." + activeLayout + " .key[data-key='j'] p").text("は");
+                $("." + activeLayout + " .key[data-key='k'] p").text("ほ");
+                $("." + activeLayout + " .key[data-key='l'] p").text("へ");
+                return;
+            }
+
+            else if (key === "u") {
+                $("." + activeLayout + " .key p").text("");
+                $("." + activeLayout + " .key[data-key='a'] p").text("に");
+                $("." + activeLayout + " .key[data-key='s'] p").text("ぬ");
+                $("." + activeLayout + " .key[data-key='d'] p").text("の");
+                $("." + activeLayout + " .key[data-key='f'] p").text("な");
+                $("." + activeLayout + " .key[data-key='j'] p").text("な");
+                $("." + activeLayout + " .key[data-key='k'] p").text("の");
+                $("." + activeLayout + " .key[data-key='l'] p").text("ね");
+                return;
+            }
+
+            else if (key === "i") {
+                $("." + activeLayout + " .key p").text("");
+                $("." + activeLayout + " .key[data-key='a'] p").text("き");
+                $("." + activeLayout + " .key[data-key='s'] p").text("く");
+                $("." + activeLayout + " .key[data-key='d'] p").text("こ");
+                $("." + activeLayout + " .key[data-key='f'] p").text("か");
+                $("." + activeLayout + " .key[data-key='j'] p").text("か");
+                $("." + activeLayout + " .key[data-key='k'] p").text("こ");
+                $("." + activeLayout + " .key[data-key='l'] p").text("け");
+                return;
+            }
+
+            else if (key === "o") {
+                $("." + activeLayout + " .key p").text("");
+                $("." + activeLayout + " .key[data-key='a'] p").text("み");
+                $("." + activeLayout + " .key[data-key='s'] p").text("む");
+                $("." + activeLayout + " .key[data-key='d'] p").text("も");
+                $("." + activeLayout + " .key[data-key='f'] p").text("ま");
+                $("." + activeLayout + " .key[data-key='j'] p").text("ま");
+                $("." + activeLayout + " .key[data-key='k'] p").text("も");
+                $("." + activeLayout + " .key[data-key='l'] p").text("め");
+                return;
+            }
+
+            else if (key === "p") {
+                $("." + activeLayout + " .key p").text("");
+                $("." + activeLayout + " .key[data-key='a'] p").text("び");
+                $("." + activeLayout + " .key[data-key='s'] p").text("ぶ");
+                $("." + activeLayout + " .key[data-key='d'] p").text("ぼ");
+                $("." + activeLayout + " .key[data-key='f'] p").text("ば");
+                $("." + activeLayout + " .key[data-key='j'] p").text("ば");
+                $("." + activeLayout + " .key[data-key='k'] p").text("ぼ");
+                $("." + activeLayout + " .key[data-key='l'] p").text("べ");
+                return;
+            }
+            else if (key === "b") {
+                $("." + activeLayout + " .key p").text("");
+                $("." + activeLayout + " .key[data-key='a'] p").text("ぴ");
+                $("." + activeLayout + " .key[data-key='s'] p").text("ぷ");
+                $("." + activeLayout + " .key[data-key='d'] p").text("ぽ");
+                $("." + activeLayout + " .key[data-key='f'] p").text("ぱ");
+                $("." + activeLayout + " .key[data-key='j'] p").text("ぱ");
+                $("." + activeLayout + " .key[data-key='k'] p").text("ぽ");
+                $("." + activeLayout + " .key[data-key='l'] p").text("ぺ");
+                return;
+            }
+            else if (key === "n") {
+                $("." + activeLayout + " .key p").text("");
+                $("." + activeLayout + " .key[data-key='a'] p").text("じ");
+                $("." + activeLayout + " .key[data-key='s'] p").text("ず");
+                $("." + activeLayout + " .key[data-key='d'] p").text("ぞ");
+                $("." + activeLayout + " .key[data-key='f'] p").text("ざ");
+                $("." + activeLayout + " .key[data-key='j'] p").text("ざ");
+                $("." + activeLayout + " .key[data-key='k'] p").text("ぞ");
+                $("." + activeLayout + " .key[data-key='l'] p").text("ぜ");
+                return;
+            }
+            else if (key === "m") {
+                $("." + activeLayout + " .key p").text("");
+                $("." + activeLayout + " .key[data-key='a'] p").text("ち");
+                $("." + activeLayout + " .key[data-key='s'] p").text("つ");
+                $("." + activeLayout + " .key[data-key='d'] p").text("と");
+                $("." + activeLayout + " .key[data-key='f'] p").text("た");
+                $("." + activeLayout + " .key[data-key='j'] p").text("た");
+                $("." + activeLayout + " .key[data-key='k'] p").text("と");
+                $("." + activeLayout + " .key[data-key='l'] p").text("て");
+                return;
+            }
+            else if (key === "h") {
+                $("." + activeLayout + " .key p").text("");
+                $("." + activeLayout + " .key[data-key='s'] p").text("ゆ");
+                $("." + activeLayout + " .key[data-key='d'] p").text("よ");
+                $("." + activeLayout + " .key[data-key='f'] p").text("や");
+                $("." + activeLayout + " .key[data-key='j'] p").text("や");
+                $("." + activeLayout + " .key[data-key='k'] p").text("よ");
+                return;
+            }
+            else if (key === "c") {
+                $("." + activeLayout + " .key p").text("");
+                $("." + activeLayout + " .key[data-key='s'] p").text("ゅ");
+                $("." + activeLayout + " .key[data-key='d'] p").text("ょ");
+                $("." + activeLayout + " .key[data-key='f'] p").text("ゃ");
+                $("." + activeLayout + " .key[data-key='j'] p").text("ゃ");
+                $("." + activeLayout + " .key[data-key='k'] p").text("ょ");
+                return;
+            }
+
+            else if (key === "t") {
+                $("." + activeLayout + " .key p").text("");
+                $("." + activeLayout + " .key[data-key='a'] p").text("ゐ");
+                $("." + activeLayout + " .key[data-key='d'] p").text("を");
+                $("." + activeLayout + " .key[data-key='f'] p").text("わ");
+                $("." + activeLayout + " .key[data-key='j'] p").text("わ");
+                $("." + activeLayout + " .key[data-key='k'] p").text("を");
+                $("." + activeLayout + " .key[data-key='l'] p").text("ゑ");
+                return;
+            }
+
+            if (key === "a" || key === "s" || key === "d" || key === "f" || key === "j" || key === "k" || key === "l") {
                 let charToInsert = keyElement.text().trim();
                 if (charToInsert) {
                     insertCharacter(charToInsert);
@@ -74,4 +221,236 @@ $(document).ready(function () {
         let originalChar = $(this).find("p").text();
         $(this).attr("data-key-original", originalChar);
     });
+});
+
+$(document).ready(function() {
+
+    let currentKeyboard = "kana-keyboard"; 
+
+    $("input[name='keyboard-layout']").change(function () {
+        $(".keyboard-container > div").hide(); 
+        $(".emoji").hide(); 
+        $("." + $(this).val()).show(); 
+        currentKeyboard = $(this).val();
+    });
+
+    $('.emojibtn').on('click', function () {
+        $('.emoji').show(); 
+        $('.keyboard-container > div').hide(); 
+    });
+    
+    $('.abc').on('click', function () {
+        $('.emoji').hide(); 
+        $("." + currentKeyboard).show(); 
+    });
+
+
+
+
+    let textInput = $('.inputText_keyboard');
+    let fontSize = 16;
+    let history = [""];  
+    let historyIndex = 0;
+
+    $('.selectAllBtn').click(function() {
+        textInput.select();
+    });
+
+    $('.copyBtn').click(function() {
+        textInput.select();
+        document.execCommand('copy');
+
+        let originalText = $(this).text();
+        $(this).text("Copied!");
+
+        setTimeout(() => {
+            $(this).text(originalText);
+        }, 2000); // Reset after 2 seconds
+    });
+
+    $('.undoBtn').click(function() {
+        if (historyIndex > 0) {
+            historyIndex--;
+            textInput.val(history[historyIndex]);
+        }
+    });
+
+    $('.redoBtn').click(function() {
+        if (historyIndex < history.length - 1) {
+            historyIndex++;
+            textInput.val(history[historyIndex]);
+        }
+    });
+
+    $('.clearAllBtn').click(function() {
+        textInput.val('');
+        history = [""];  // Reset history
+        historyIndex = 0;
+    });
+
+    $('.decreaseFontBtn').click(function() {
+        if (fontSize > 10) {
+            fontSize -= 2;
+            updateFontSize();
+        }
+    });
+
+    $('.increaseFontBtn').click(function() {
+        if (fontSize < 25) {
+            fontSize += 2;
+            updateFontSize();
+        }
+    });
+
+    $('.downloadBtn').click(function() {
+        let text = $('.inputText_keyboard').val();
+        let blob = new Blob([text], { type: 'text/plain' });
+        let link = $('<a>')
+            .attr('href', URL.createObjectURL(blob))
+            .attr('download', 'chinese_language.txt')
+            .appendTo('body');
+
+        link[0].click();
+        
+        setTimeout(() => {
+            URL.revokeObjectURL(link.attr('href'));
+            link.remove();
+        }, 100);
+    });
+
+    $('.imageBtn').click(function() {
+        let canvas = document.createElement('canvas');
+        let ctx = canvas.getContext('2d');
+        
+        let textContent = textInput.val();
+        let canvasWidth = textInput.width();
+        let canvasHeight = textInput.height();
+        canvas.width = canvasWidth;
+        canvas.height = canvasHeight;
+
+        ctx.fillStyle = "#FFFFFF";  
+        ctx.fillRect(0, 0, canvas.width, canvas.height);  
+
+        ctx.font = fontSize + 'px Arial';
+        ctx.fillStyle = "#000000"; 
+        
+        let lineHeight = fontSize * 1.2;
+        let lines = textContent.split('\n');
+        let y = fontSize;
+
+        lines.forEach(function(line) {
+            ctx.fillText(line, 10, y); 
+            y += lineHeight;
+        });
+
+        let imageData = canvas.toDataURL('image/png');
+        let link = document.createElement('a');
+        link.href = imageData;
+        link.download = 'chinese_language.png';
+        link.click();
+    });
+
+    function updateFontSize() {
+        textInput.css('font-size', fontSize + 'px');
+        $('.key p, .emoji').css('font-size', fontSize + 'px');
+    }
+
+    textInput.on('input', function() {
+        let newValue = textInput.val();
+        if (history[historyIndex] !== newValue) {
+            history = history.slice(0, historyIndex + 1); 
+            history.push(newValue);
+            historyIndex++;
+        }
+    });
+});
+
+ $(document).ready(function() {
+  $('.backspace').on('click', function() {
+      var inputText = $('.inputText_keyboard');
+      var currentText = inputText.val();
+      inputText.val(currentText.slice(0, -1));
+  });
+
+  $('.enter').on('click', function() {
+      var inputText = $('.inputText_keyboard');
+      inputText.val(inputText.val() + '\n');
+  });
+
+  let visibleIndex = 0;
+  const visibleCount = 5; 
+
+  function updateBoxVisibility() {
+    let allEmojis = $('.all-emojis div');
+    allEmojis.each(function(index) {
+      if (index >= visibleIndex && index < visibleIndex + visibleCount) {
+        $(this).show();
+      } else {
+        $(this).hide();
+      }
+    });
+  }
+
+  updateBoxVisibility();
+
+  $('.up').click(function() {
+    if (visibleIndex > 0) {
+      visibleIndex--;
+      updateBoxVisibility();
+    }
+  });
+
+  $('.down').click(function() {
+    let allEmojis = $('.all-emojis div');
+    if (visibleIndex + visibleCount < allEmojis.length) {
+      visibleIndex++;
+      updateBoxVisibility();
+    }
+  });
+
+});
+
+$(document).ready(function() {
+  $('.backspace').on('click', function() {
+      var inputText = $('.inputText_keyboard');
+      var currentText = inputText.val();
+      inputText.val(currentText.slice(0, -1));
+  });
+
+  $('.enter').on('click', function() {
+      var inputText = $('.inputText_keyboard');
+      inputText.val(inputText.val() + '\n');
+  });
+
+  let visibleIndex = 0;
+  const visibleCount = 5; 
+
+  function updateBoxVisibility() {
+    let allEmojis = $('.all-emojis div');
+    allEmojis.each(function(index) {
+      if (index >= visibleIndex && index < visibleIndex + visibleCount) {
+        $(this).show();
+      } else {
+        $(this).hide();
+      }
+    });
+  }
+
+  updateBoxVisibility();
+
+  $('.up').click(function() {
+    if (visibleIndex > 0) {
+      visibleIndex--;
+      updateBoxVisibility();
+    }
+  });
+
+  $('.down').click(function() {
+    let allEmojis = $('.all-emojis div');
+    if (visibleIndex + visibleCount < allEmojis.length) {
+      visibleIndex++;
+      updateBoxVisibility();
+    }
+  });
+
 });

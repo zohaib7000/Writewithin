@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $("#countButton").click(function(){
         let text = $("#textInput").val().trim();
-
+        $('.paragraph-counter-output').css("display", "block");
         let sentences = text.match(/[^.!?]+[.!?]+/g);
         let sentenceCount = sentences ? sentences.length : 0;
 

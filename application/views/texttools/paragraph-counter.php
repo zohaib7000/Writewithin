@@ -26,14 +26,13 @@
                 <textarea id="textInput" placeholder="Type or paste your text here..."></textarea>
               </div>
               
-              <div class="paragraph-counter-output">
-                <div id="result"></div>
-              </div>
-              
               <div class="paragraph-counter-btn">
                 <button id="countButton">Count Text</button>
               </div>
               
+              <div class="paragraph-counter-output">
+                <div id="result"></div>
+              </div>
               
           </div>
             
@@ -46,7 +45,7 @@
     <div class="container">
       <div id="about">
           <div class="about-paragraph">
-            <h2>Combine Words</h2>
+            <h2>Paragraph Counter</h2>
           </div>
       </div>
     </div>

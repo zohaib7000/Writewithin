@@ -11,6 +11,20 @@ body{
     width: 100%;
     padding: 20px 0;
 }
+.dark_mode .writewithin-homepage-template{
+    background-color: #000;
+}
+.dark_mode .writewithin-wrapper ul li span,
+.dark_mode .writewithin-wrapper h2{
+    color: #fff;
+}
+
+.dark_mode .writewithin-wrapper ul li label{
+    box-shadow: 0px 0px 5px 5px #343536;
+}
+.dark_mode .about-paragraph li{
+    color: #fff;
+}
 .writewithin-wrapper{
     width: 100%;
     border: 1px solid #E3E7ED;
@@ -19,8 +33,8 @@ body{
 }
 .writewithin-wrapper h2{
     font-size: 22px;
-    font-weight: 300;
-    margin-bottom: 20px;
+    font-weight: 600;
+    margin-bottom: 40px;
 }
 .writewithin-wrapper ul{
     list-style: none;
@@ -28,6 +42,7 @@ body{
     align-items: center;
     gap: 40px;
     margin: 20px 0;
+    flex-wrap: wrap;
 }
 .writewithin-wrapper ul li a{
     word-break: break-word;
@@ -65,7 +80,7 @@ body{
  .writewithin-wrapper ul .icon_sty:hover label::after {
     width: 65px;
     height: 65px;
-    border-color: #1E70B9;
+    border-color: rgb(61 29 122);
     border-radius: 5px;
 }
 .writewithin-wrapper ul .icon_sty label::before, .writewithin-wrapper ul .icon_sty label::after {
@@ -132,7 +147,7 @@ body{
     transition: 0.3s;
 }
 .radio-group input:checked + label {
-    background: rgb(53 204 91);
+    background: linear-gradient(118deg, rgb(61 29 122) 20%, rgb(29 152 148) 50%);
     color: white;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -349,7 +364,7 @@ h1{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: 22px;
+    margin-top: 15px;
 }
 .keyboard_mode_day{
     transition: 0.3s;
@@ -594,12 +609,12 @@ h1{
     font-size: 15px;
     font-weight: 500;
     padding: 7px 0 7px;
-    color: rgb(53 204 91);
+    color: rgb(61 29 122);
 }
 .about-paragraph h2{
     margin: 20px 0 0;
     font-size: 17px;
-    color: rgb(53 204 91);
+    color: rgb(61 29 122);
 }
 .about-paragraph li{
     font-size: 15px;
@@ -621,7 +636,7 @@ h1{
 .about-paragraph b{
     display: inline-block;
     padding: 1px 10px;
-    background-color: rgb(53 204 91);
+    background-color: rgb(61 29 122);
     color: #fff;
     border-radius: 26px;
     margin-bottom: 8px;
@@ -751,7 +766,7 @@ h1{
     align-items: center;
 }
 .faq-item b{
-    color: rgb(53 204 91);
+    color: rgb(61 29 122);
 }
 .faq-question p{
     font-size: 20px;
@@ -918,13 +933,18 @@ h1{
     .main-keyboard-box textarea{
         height: 150px;
     }
+    .writewithin-wrapper ul{
+        justify-content: center;
+    }
 } 
 
 @media only screen and (max-width: 480px) {
     #about {
         padding: 20px 5px 50px;
     }
-    .header-left img{
+    .header-left img,
+    .footer-col40 img{
         width: 250px;
     }
+
 }

@@ -15,6 +15,7 @@ $(document).ready(function() {
                 lineList += '<li>' +  line + '</li>';
             });
             lineList += '</ol>';
+            $('#count').css("display", "block");
             $('#lineNumbers').html(lineList);
         } else {
             $('#count').hide();

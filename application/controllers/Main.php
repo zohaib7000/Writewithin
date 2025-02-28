@@ -38,6 +38,10 @@ class Main extends CI_Controller {
     {
         $this->load->view('keyboard/japanese-keyboard');
     }
+    public function italiankeyboard_view()
+    {
+        $this->load->view('keyboard/italian-keyboard');
+    }
     
     // texttools
 

@@ -15,7 +15,12 @@
 .dark_mode .main-line-counter-title h1 {
     color: #fff;
 }
-
+.dark_mode .main-line-counter-template{
+    background-color: #000;
+}
+.dark_mode .checkbox-linecounter{
+    color: #fff;
+}
 .main-line-counter-title p{
     font-size: 16px;
     display: block;
@@ -90,14 +95,47 @@
     font-size: 13px;
 }
 #count{
-    width: 50%;
+    width: 100%;
     margin: auto;
     padding: 10px;
-    box-shadow: rgb(221 237 238) 0px 1px 6px 0px inset, rgba(255, 255, 255, .9) 2px -3px 10px 10px inset;
     background-color: #fff;
-    /* border-radius: 2px; */
-    border-left: 5px solid rgb(200 71 38);
+    border: 1px solid #d6d6d6;
+    display: none;
+    margin-bottom: 10px;
+}
+#lineNumbers{
+    
+    background-color: #fff;
 }
 #lineNumbers ol{
+    border: 1px solid #d6d6d6;
     list-style-position: inside;
+    padding: 10px;
+}
+@media only screen and (max-width: 880px) {
+    .main-line-counter-wrapper{
+        width: 100%;
+        padding: 10px;
+    }
+
+}
+@media only screen and (max-width: 680px) {
+    .line-counter-input{
+
+    }
+    .line-counter-input textarea{
+        padding: 10px;
+        max-height: 150px;
+        min-height: 150px;
+    }
+    .line-counter-output textarea{
+        width: 100%;
+        padding: 10px;
+        max-height: 150px;
+        min-height: 150px;
+    }
+    .line-counter-output{
+        text-align: center;
+    }
+
 }

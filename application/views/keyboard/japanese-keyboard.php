@@ -3,7 +3,7 @@
 <head>
     <title>Japenese Keyboard</title>
     <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content="japanese keyboard, japanese virtual keyboard, japanese keyboard online, japanese onscreen keyboard, type japanese online, type japanese letters online, type in japanese online, type japanese, type japanese keyboard, japanese typing, writing japanese, type in japanese, japanese letters, japanese keyboard layout, google japanese, hiragana keyboard, hiragana virtual keyboard, hiragana keyboard online, hiragana onscreen keyboard, type hiragana online, type hiragana letters online, type in hiragana online, type hiragana, type hiragana keyboard, hiragana typing, writing hiragana, type in hiragana, hiragana letters, hiragana keyboard layout, google hiragana, katakana keyboard, katakana virtual keyboard, katakana keyboard online, katakana onscreen keyboard, type katakana online, type katakana letters online, type in katakana online, type katakana, type katakana keyboard, katakana typing, writing katakana, type in katakana, katakana letters, katakana keyboard layout, google katakana, kanji keyboard, kanji virtual keyboard, kanji keyboard online, kanji onscreen keyboard, type kanji online, type kanji letters online, type in kanji online, type kanji, type kanji keyboard, kanji typing, writing kanji, type in kanji, kanji letters, kanji keyboard layout, google kanji, japanese input, japanese ime, japanese kana, japanese romaji, romaji input, romaji ime, japanese romaji ime">
     <?php
       $this->load->view('include/headFiles.php');
       ?>
@@ -872,7 +872,7 @@
     <div class="container">
       <div id="about">
           <div class="about-paragraph">
-            <h2>Chinese Keyboard</h2>
+            <h2>Japanese Keyboard</h2>
           </div>
       </div>
     </div>

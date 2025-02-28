@@ -23,7 +23,7 @@
                 
                 <li>
                   <a href="<?=base_url('korean-keyboard');?>" class="icon_sty">
-                    <label style="background-image: url('assets/images/title-icon.png');">
+                    <label style="background-image: url('assets/images/korea.png');">
                     </label>
                     <span>Korean Keyboard</span>
                   </a>
@@ -31,7 +31,7 @@
 
                 <li>
                   <a href="<?=base_url('chinese-keyboard');?>" class="icon_sty">
-                    <label style="background-image: url('assets/images/title-icon.png');">
+                    <label style="background-image: url('assets/images/china.png');">
                     </label>
                     <span>Chinese Keyboard</span>
                   </a>
@@ -39,9 +39,17 @@
 
                 <li>
                   <a href="<?=base_url('japanese-keyboard');?>" class="icon_sty">
-                    <label style="background-image: url('assets/images/title-icon.png');">
+                    <label style="background-image: url('assets/images/japan.png');">
                     </label>
                     <span>Japanese Keyboard</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="<?=base_url('italian-keyboard');?>" class="icon_sty">
+                    <label style="background-image: url('assets/images/italy.png');">
+                    </label>
+                    <span>Italian Keyboard</span>
                   </a>
                 </li>
             </ul>
@@ -53,7 +61,7 @@
                 
                 <li>
                   <a href="<?=base_url('combine-words');?>" class="icon_sty">
-                    <label style="background-image: url('assets/images/title-icon.png');">
+                    <label style="background-image: url('assets/images/combine.png');">
                     </label>
                     <span>Combine Words</span>
                   </a>
@@ -61,15 +69,15 @@
 
                 <li>
                   <a href="<?=base_url('sentence-counter');?>" class="icon_sty">
-                    <label style="background-image: url('assets/images/title-icon.png');">
+                    <label style="background-image: url('assets/images/sentence.png');">
                     </label>
                     <span>Sentence Counter</span>
                   </a>
                 </li>
 
                 <li>
-                  <a href="<?=base_url('sentence-counter');?>" class="icon_sty">
-                    <label style="background-image: url('assets/images/title-icon.png');">
+                  <a href="<?=base_url('paragraph-counter');?>" class="icon_sty">
+                    <label style="background-image: url('assets/images/paragraph.png');">
                     </label>
                     <span>Paragraph Counter</span>
                   </a>
@@ -77,7 +85,7 @@
 
                 <li>
                   <a href="<?=base_url('line-counter');?>" class="icon_sty">
-                    <label style="background-image: url('assets/images/title-icon.png');">
+                    <label style="background-image: url('assets/images/line.png');">
                     </label>
                     <span>Line Counter</span>
                   </a>

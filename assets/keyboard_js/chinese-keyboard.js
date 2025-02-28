@@ -686,6 +686,10 @@ $(document).ready(function () {
 
 
  $(document).ready(function() {
+    $(document).on('click', '.all-emojis p', function() {
+        var emoji = $(this).text(); // Get the clicked emoji
+        $('.inputText_keyboard').append(emoji); // Append emoji to the input area
+    });
 
     $('.emojibtn').on('click', function(){
         $('.emoji').show();
@@ -703,8 +707,14 @@ $(document).ready(function () {
     let historyIndex = 0;
 
     $('.selectAllBtn').click(function() {
-        textInput.select();
+        var textInput = document.querySelector('.inputText_keyboard');
+        var range = document.createRange();
+        range.selectNodeContents(textInput);
+        var selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
     });
+
 
     $('.copyBtn').click(function() {
         textInput.select();
@@ -733,7 +743,7 @@ $(document).ready(function () {
     });
 
     $('.clearAllBtn').click(function() {
-        textInput.val('');
+        textInput.text('');
         history = [""];  // Reset history
         historyIndex = 0;
     });

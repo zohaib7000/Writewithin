@@ -26,14 +26,13 @@
                 <textarea id="textInput" placeholder="Type or paste your text here..."></textarea>
               </div>
               
-              <div class="sentence-counter-output">
-                <div id="result"></div>
-              </div>
-              
               <div class="sentence-counter-btn">
                 <button id="countButton">Count Text</button>
               </div>
               
+              <div class="sentence-counter-output">
+                <div id="result"></div>
+              </div>
               
           </div>
             

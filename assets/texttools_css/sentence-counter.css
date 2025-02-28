@@ -15,7 +15,9 @@
 .dark_mode .main-sentence-counter-title h1 {
     color: #fff;
 }
-
+.dark_mode .main-sentence-counter-template{
+    background-color: #000;
+}
 .main-sentence-counter-title p{
     font-size: 16px;
     display: block;
@@ -26,11 +28,11 @@
 }
 .main-sentence-counter-wrapper{
     width: 80%;
-    background-color: rgba(50, 50, 93, 0.1);
+    background-color: rgb(214 214 214 / 10%);
     padding: 20px;
-    box-shadow: 0 0 5px #666;
     border-radius: 4px;
     margin: auto;
+    border: 1px solid #d6d6d6;
 }
 .sentence-counter-input{
     margin-bottom: 10px;
@@ -49,25 +51,28 @@
     text-align: center;
     display: flex;
     gap: 10px;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 10px;
 }
 .sentence-counter-btn button{
-    font-size: 20px;
-    padding: 5px 15px;
-    border-radius: 20px;
-    background: rgb(38,170,38);
-    background: linear-gradient(90deg, rgba(38,170,38,1) 0%, rgba(31,236,65,1) 50%, rgba(50,193,55,1) 87%);
+    font-size: 12px;
+    padding: 7px 15px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    background: rgb(38, 170, 38);
+    background: linear-gradient(118deg, rgb(61 29 122) 20%, rgb(29 152 148) 50%);
     color: #fff;
     cursor: pointer;
     border: none;
+    letter-spacing: 2px;
 }
 .sentence-counter-output{
     width: 100%;
-    background-color: #0000001a;
-    display: inline-block;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    margin: auto;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #d6d6d6;
+    display: none;
 }
 .sentence-counter-output #result p{
     padding: 5px 10px;
@@ -89,4 +94,30 @@
 }
 .main-sentence-counter-box textarea::placeholder {
     font-size: 13px;
+}
+@media only screen and (max-width: 880px) {
+    .main-sentence-counter-wrapper{
+        width: 100%;
+        padding: 10px;
+    }
+
+}
+@media only screen and (max-width: 680px) {
+    .sentence-counter-input{
+
+    }
+    .sentence-counter-input textarea{
+        padding: 10px;
+        max-height: 150px;
+        min-height: 150px;
+    }
+    .sentence-counter-output textarea{
+        width: 100%;
+        padding: 10px;
+        max-height: 150px;
+        min-height: 150px;
+    }
+    .sentence-counter-output{
+        text-align: center;
+    }
 }

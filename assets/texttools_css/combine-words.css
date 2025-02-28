@@ -15,7 +15,9 @@
 .dark_mode .main-combine-words-title h1 {
     color: #fff;
 }
-
+.dark_mode .main-combine-words-template{
+    background-color: #000;
+}
 .main-combine-words-title p{
     font-size: 16px;
     display: block;
@@ -26,11 +28,12 @@
 }
 .main-combine-words-wrapper{
     width: 80%;
-    background-color: rgba(50, 50, 93, 0.1);
+    background-color: rgb(214 214 214 / 10%);
     padding: 20px;
-    box-shadow: 0 0 5px #666;
     border-radius: 4px;
     margin: auto;
+    border: 1px solid #d6d6d6;
+
 }
 .combine-words-input{
     text-align: center;
@@ -57,15 +60,16 @@
     margin-bottom: 10px;
 }
 .combine-words-btn button{
-    font-size: 20px;
-    width: 100%;
-    padding: 7px;
-    border-radius: 20px;
-    background: rgb(38,170,38);
-    background: linear-gradient(90deg, rgba(38,170,38,1) 0%, rgba(31,236,65,1) 50%, rgba(50,193,55,1) 87%);
+    font-size: 12px;
+    padding: 7px 15px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    background: rgb(38, 170, 38);
+    background: linear-gradient(118deg, rgb(61 29 122) 20%, rgb(29 152 148) 50%);
     color: #fff;
     cursor: pointer;
     border: none;
+    letter-spacing: 2px;
 }
 .combine-words-output textarea{
     width: 100%;
@@ -84,4 +88,46 @@
 }
 .main-combine-words-box textarea::placeholder {
     font-size: 13px;
+}
+
+@media only screen and (max-width: 880px) {
+    .main-combine-words-wrapper{
+        width: 100%;
+        padding: 10px;
+    }
+
+}
+@media only screen and (max-width: 680px) {
+    .combine-words-input{
+
+    }
+    .combine-words-input textarea{
+        padding: 10px;
+        max-height: 150px;
+        min-height: 150px;
+    }
+    .combine-words-output textarea{
+        width: 100%;
+        padding: 10px;
+        max-height: 150px;
+        min-height: 150px;
+    }
+
+}
+@media only screen and (max-width: 480px) {
+    .combine-words-input{
+        flex-wrap: wrap;
+    }
+    .combine-words-btn {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .combine-words-input textarea {
+        padding: 10px;
+        max-height: 100px;
+        min-height: 100px;
+    }
+    .combine-words-output{
+        text-align: center;
+    }
 }
