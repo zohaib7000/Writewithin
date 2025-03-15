@@ -689,13 +689,13 @@
                                 <div class="key wide" data-key="Shift">Shift</div>
                             </div>
                             <div class="row">
-                                <div class="key wide" data-key="Ctrl">Ctrl</div>
+                                <div class="key wide ctrl" data-key="Ctrl">Ctrl</div>
                                 <div class="key wide emojibtn" data-key="Emoji">🙂</div>
                                 <div class="key wide" data-key="Alt">Alt</div>
                                 <div class="key extra-wide space" data-key="Space">Space</div>
                                 <div class="key wide" data-key="AltGr">AltGr</div>
                                 <div class="key esc" data-key="Esc">Esc</div>
-                                <div class="key wide" data-key="Ctrl">Ctrl</div>
+                                <div class="key wide ctrl" data-key="Ctrl">Ctrl</div>
                             </div>
                           </div>
 
@@ -745,7 +745,7 @@
                                 <div class="key" data-key="l"><small>l</small><p>え</p></div>
                                 <div class="key" data-key=";"><small>;</small><p>:</p></div>
                                 <div class="key" data-key="'"><small>'</small><p>…</p></div>
-                                <div class="key extra-wide" data-key="Enter">Enter</div>
+                                <div class="key extra-wide enter" data-key="Enter">Enter</div>
                             </div>
                             <div class="row">
                                 <div class="key wide extra-shift" data-key="Shift">Shift</div>
@@ -808,7 +808,7 @@
                             </div>
                             <div class="row">
                                 <div class="key extra-wide caps" data-key="Caps Lock">Caps Lock</div>
-                                <div class="key" data-key="a"><small>a</small><p>a</p></div>
+                                <div class="key" data-key="a" data-default="あ"><small>a</small><p>a</p></div>
                                 <div class="key" data-key="s"><small>s</small><p>s</p></div>
                                 <div class="key" data-key="d"><small>d</small><p>d</p></div>
                                 <div class="key" data-key="f"><small>f</small><p>f</p></div>
@@ -822,7 +822,7 @@
                                 <div class="key extra-wide" data-key="Enter">Enter</div>
                             </div>
                             <div class="row">
-                                <div class="key wide extra-shift" data-key="Shift">Shift</div>
+                                <div class="key wide extra-shift shift" data-key="Shift">Shift</div>
                                 <div class="key" data-key="z"><small>z</small><p>z</p></div>
                                 <div class="key" data-key="x"><small>x</small><p>x</p></div>
                                 <div class="key" data-key="c"><small>c</small><p>c</p></div>
@@ -834,7 +834,7 @@
                                 <div class="key" data-key=","><small>,</small><p>,</p></div>
                                 <div class="key" data-key="."><small>.</small><p>.</p></div>
                                 <div class="key" data-key="/"><small>/</small><p>/</p></div>
-                                <div class="key wide" data-key="Shift">Shift</div>
+                                <div class="key wide shift" data-key="Shift">Shift</div>
                             </div>
                             <div class="row">
                                 <div class="key wide ctrl" data-key="Ctrl">Ctrl</div>

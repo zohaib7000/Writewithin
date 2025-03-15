@@ -13,7 +13,7 @@
     <?php
     $this->load->view('include/header.php');
     ?>
-
+    
 <section class="main-combine-words-template">
       <div class="container">
             <div class="main-combine-words-title">

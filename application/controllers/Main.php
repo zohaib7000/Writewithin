@@ -26,9 +26,9 @@ class Main extends CI_Controller {
     {
     	$this->load->view('pages/about');
     }
-    public function koreankeyboard_view()
+    public function korean_keyboard_view()
     {
-        $this->load->view('keyboard/korean-keyboard');
+        $this->load->view('keyboard/online-korean-keyboard');
     }
     public function chinesekeyboard_view()
     {
@@ -42,7 +42,26 @@ class Main extends CI_Controller {
     {
         $this->load->view('keyboard/italian-keyboard');
     }
-    
+    public function ukrainiankeyboard_view()
+    {
+        $this->load->view('keyboard/ukrainian-keyboard');
+    }
+    public function baybayinkeyboard_view()
+    {
+        $this->load->view('keyboard/baybayin-keyboard');
+    }
+    public function spanishkeyboard_view()
+    {
+        $this->load->view('keyboard/spanish-keyboard');
+    }
+    public function swedishkeyboard_view()
+    {
+        $this->load->view('keyboard/swedish-keyboard');
+    }
+    public function turkishkeyboard_view()
+    {
+        $this->load->view('keyboard/turkish-keyboard');
+    }
     // texttools
 
     public function combinewords_view()
@@ -61,7 +80,11 @@ class Main extends CI_Controller {
     {
         $this->load->view('texttools/line-counter');
     }
-
+    public function reverse_text_generator_view()
+    {
+        $this->load->view('texttools/reverse-text-generator');
+    }
+    
     public function contactPage()
     {
     	$this->load->view('pages/contact');
@@ -83,10 +106,7 @@ class Main extends CI_Controller {
     {
         $this->load->view('pages/names');
     }
-    
-   
-
-  	public function mode_changer()
+	public function mode_changer()
     {
         $this->load->library('session');
         $mode = $this->input->post('dark_mode');

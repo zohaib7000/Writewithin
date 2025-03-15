@@ -3,7 +3,7 @@
 <head>
     <title>Paragraph Counter</title>
     <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content="paragraph counter">
     <?php
       $this->load->view('include/headFiles.php');
       ?>

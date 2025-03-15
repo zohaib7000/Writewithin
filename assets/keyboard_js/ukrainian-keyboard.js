@@ -3,33 +3,37 @@ $(document).ready(function () {
     let shiftActive = false; 
     let shiftHoverActive = false; 
     let ctrlActive = false;
+
     // ctrl Key Mapping
     const ctrlMap = {
-        "e": "€", "'": "^", "ì":"î", "è": "[", "ò": "@", ",": "«", "。": "»", "-": "°", "à": "#", "ù": "§"
+        "2": "«", "г": "ґ",
     };
     // ESC Key Mapping
     const escMap = {
-        "è": "[", "'": "-", "ì": "=", "+": "]", "ò" : ";", "à" : "'", "ù": "\\", "-" : "/",
+        "й": "q", "ц": "w", "у": "e", "к": "r", "е": "t", "н": "y", "г": "u", "ш": "i", "щ": "o", "з": "p",
+        "х": "[", "ї": "]", "ф": "a", "і": "s", "в": "d", "а": "f", "п": "g", "р": "h", "о": "j",
+        "л": "k", "д": "l", "ж": ";", "є": "'", "ґ": "\\", "я": "z", "ч": "x", "с": "c", "м": "v", "и": "b",
+        "т": "n", "ь": "m", "б": ",", "ю": ".", ".": "/"
     };
 
     // Shift Key Mapping (When Esc is active)
     const shiftMap = {
-        "a": "A", "b": "B", "c": "C", "d": "D", "e": "E", "f": "F", "g": "G", "h": "H", "i": "I", "j": "J",
-        "k": "K", "l": "L", "m": "M", "n": "N", "o": "O", "p": "P", "q": "Q", "r": "R", "s": "S", "t": "T",
-        "u": "U", "v": "V", "w": "W", "x": "X", "y": "Y", "z": "Z",
+        "й": "Q", "ц": "W", "у": "E", "к": "R", "е": "T", "н": "Y", "г": "U", "ш": "I", "щ": "O", "з": "P",
+        "х": "[", "ї": "]", "ф": "A", "і": "S", "в": "D", "а": "F", "п": "G", "р": "H", "о": "J",
+        "л": "K", "д": "L", "я": "Z", "ч": "X", "с": "C", "м": "V", "и": "B","\\": "|",".":"?","`":"~",
+        "т": "N", "ь": "M", "ж": ":", "є": '"', "б": "<", "ю": ">","х": '{', "ї": "}","-":"_", "=": "+",
+
         "1": "!", "2": "@", "3": "#", "4": "$", "5": "%", "6": "^", "7": "&", "8": "*", "9": "(", "0": ")",
-        "-": "_", "+": "=", "è": "{", "+": "}", "|": "\\", "<": ",", ">": ".", "?": "/", "\\": "~","'": "_",
-        "ì" : "+", "ù" : "|", ",": "<", ".": ">", "-": '?',"ò": ':', "à": '"',
+        "-": "_", "+": "=", "è": "{", "+": "}", "|": "\\",
     };
 
     // Shift Only Mapping (When Shift is active and Esc is FALSE)
     const shiftOnlyMap = {
-        "2": '"', "@": '"',  "\\": "|", "3": "£", "1": "!", "4": "$", "5": "%", "6": "^", "7": "/", "8": "(", "9": ")",
-        "]": "*", "0" : "=", "'" : "?", "ì": "í", "è": "é", "+": "*", "ò" : "ç", "à": "ó",",": ";", ".": ":", 
-        "-": "_","ù": "ú",
-        "a": "A", "b": "B", "c": "C", "d": "D", "e": "E", "f": "F", "g": "G", "h": "H", "i": "I", "j": "J",
-        "k": "K", "l": "L", "m": "M", "n": "N", "o": "O", "p": "P", "q": "Q", "r": "R", "s": "S", "t": "T",
-        "u": "U", "v": "V", "w": "W", "x": "X", "y": "Y", "z": "Z",
+        "`": "₴", "1" : "!", "2": '"', "3" : "№", "4" : ';', "5" : "%", "6": ":", "7":"?", "8": "?", "9": "(", "0": ')',
+        "-" : "_", "=":"+","й": "Й", "ц":"Ц", "у": "У", "к": "К", "е":"Е", "н":"н", "г": "Г", "ш": "Ш", "з": "З", "х":"Х",
+        "ї":"Ї", "\\" :"/", "ф": "Ф", "і":"І", "в": "В", "а": "A", "п": "П", "р": "Р", "о": "O", "л": "Л", "д":"Д", "ж":"Ж",
+        "є": "Є", "я": "Я", "ч": "Ч", "c":"C", "м": "М", "и": "И", "т": "Т", "ь": 'Ь', "б":"Б", "ю": "Ю", ".": ","
+
     };
     
     // Toggle ctrl Key
@@ -100,7 +104,7 @@ $(document).ready(function () {
         });
     }
 
-
+    
     $(".key").on("click", function (event) {
         let $key = $(this);
         let originalChar = $key.attr("data-char");
@@ -125,7 +129,6 @@ $(document).ready(function () {
             return; // Stop further execution, so nothing gets inserted
         }
 
-        // Insert text only if Ctrl is not active
         if (!ctrlActive) {
             let keyText = $key.find("p").text();
             $(".inputText_keyboard").append(keyText);
@@ -183,7 +186,14 @@ $(document).ready(function () {
     });
 
     $(document).on("keydown", function (event) {
-        let keyPressed = event.key;
+        let keyPressed = event.key.toLowerCase();
+        
+        if (event.ctrlKey) {
+            if (["a", "c", "v", "x", "z"].includes(keyPressed)) {
+                return; 
+            }
+        }
+
         if (keyPressed === "\\") keyPressed = "\\\\";
 
         let $keyElement = $('.key[data-key="' + keyPressed + '"]');
@@ -193,8 +203,7 @@ $(document).ready(function () {
             event.preventDefault();
         }
     });
-
-    function insertChar(charToInsert) {
+  function insertChar(charToInsert) {
         let $input = $(".inputText_keyboard");
         let cursorPos = $input.prop("selectionStart");
         let text = $input.val();
@@ -204,99 +213,40 @@ $(document).ready(function () {
               .prop("selectionStart", cursorPos + charToInsert.length)
               .prop("selectionEnd", cursorPos + charToInsert.length);
     }
-
-$(document).on("keydown", function (event) {
-    let keyPressed = event.key;
-    let $input = $(".inputText_keyboard");
-
-    // Handle Backspace
-    if (keyPressed === "Backspace") {
-        event.preventDefault();
-        let text = $input.val();
-        let cursorPos = $input.prop("selectionStart");
-
-        if (cursorPos > 0) {
-            $input.val(text.slice(0, cursorPos - 1) + text.slice(cursorPos))
-                  .focus()
-                  .prop("selectionStart", cursorPos - 1)
-                  .prop("selectionEnd", cursorPos - 1);
-        }
-        return;
-    }
-
-    // Handle Enter
-    if (keyPressed === "Enter") {
-        event.preventDefault();
-        let cursorPos = $input.prop("selectionStart");
-        let text = $input.val();
-
-        $input.val(text.slice(0, cursorPos) + "\n" + text.slice(cursorPos))
-              .focus()
-              .prop("selectionStart", cursorPos + 1)
-              .prop("selectionEnd", cursorPos + 1);
-        return;
-    }
-
-    // Handle Ctrl + A (Select all)
-    if (event.ctrlKey && keyPressed.toLowerCase() === "a") {
-        event.preventDefault(); 
-        $input.focus().select();
-        return;
-    }
-    if (event.ctrlKey) {
-        let lowerKey = keyPressed.toLowerCase();
-
-        if (["c", "v", "x"].includes(lowerKey)) {
-            return; // Allow normal copy, paste, cut behavior
-        }
-
-        if (keyPressed === "Control" || keyPressed === "Ctrl") {
-            event.preventDefault(); // Prevent unintended behavior
-        }
-        return;
-    }
-
-    // Handle key visual for pressed key
-    $('.key[data-key="' + keyPressed + '"]').addClass("active");
+  
 });
-
-$(document).on("keyup", function (event) {
-    let keyReleased = event.key;
-    $('.key[data-key="' + keyReleased + '"]').removeClass("active");
-});
-
-
-
-});
-$(document).ready(function () {
-    $('.emojibtn').on('click', function () {
-        $('.emoji').show();
-        $('.italian-keyboard').hide();
-    });
-
-    $('.abc').on('click', function () {
-        $('.emoji').hide();
-        $('.italian-keyboard').show();
-    });
-
-    $(document).on('click', '.all-emojis p', function () {
-        var emoji = $(this).text();
-        var $input = $('.inputText_keyboard');
-
+ $(document).ready(function() {
+    $(document).on('click', '.all-emojis p', function() {
+        var emoji = $(this).text(); // Get the clicked emoji
+        var $input = $('.inputText_keyboard'); // Target the input field
+        
+        // Check if it's an input or a div (contenteditable)
         if ($input.is('input, textarea')) {
             let cursorPos = $input.prop("selectionStart");
             let text = $input.val();
             
+            // Insert emoji at cursor position
             $input.val(text.slice(0, cursorPos) + emoji + text.slice(cursorPos))
                   .focus()
                   .prop("selectionStart", cursorPos + emoji.length)
                   .prop("selectionEnd", cursorPos + emoji.length);
         } else {
-            $input.append(emoji);
+            $input.append(emoji); // Append for div or span
         }
     });
-});
- $(document).ready(function() {
+
+    
+
+    $('.emojibtn').on('click', function(){
+        $('.emoji').show();
+        $('.ukrainian-keyboard').hide();
+    });
+
+    $('.abc').on('click', function(){
+        $('.emoji').hide();
+        $('.ukrainian-keyboard').show();
+    });
+
     let textInput = $('.inputText_keyboard');
     let fontSize = 16;
     let history = [""];  
@@ -357,7 +307,7 @@ $(document).ready(function () {
         let blob = new Blob([text], { type: 'text/plain' });
         let link = $('<a>')
             .attr('href', URL.createObjectURL(blob))
-            .attr('download', 'italian_language.txt')
+            .attr('download', 'ukrainian_language.txt')
             .appendTo('body');
 
         link[0].click();
@@ -396,7 +346,7 @@ $(document).ready(function () {
         let imageData = canvas.toDataURL('image/png');
         let link = document.createElement('a');
         link.href = imageData;
-        link.download = 'italian_language.png';
+        link.download = 'ukrainian_language.png';
         link.click();
     });
 
@@ -463,3 +413,6 @@ $(document).ready(function () {
   });
 
 });
+
+
+  

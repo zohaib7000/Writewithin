@@ -3,7 +3,7 @@
 <head>
     <title>Sentence Counter</title>
     <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content="sentence counter">
     <?php
       $this->load->view('include/headFiles.php');
       ?>

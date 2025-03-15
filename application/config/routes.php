@@ -52,15 +52,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'Main';
 
 
-$route['korean-keyboard']           	= 'Main/koreankeyboard_view';
+$route['online-korean-keyboard']       	= 'Main/korean_keyboard_view';
 $route['chinese-keyboard']           	= 'Main/chinesekeyboard_view';
 $route['japanese-keyboard']           	= 'Main/japanesekeyboard_view';
 $route['italian-keyboard']           	= 'Main/italiankeyboard_view';
+$route['ukrainian-keyboard']           	= 'Main/ukrainiankeyboard_view';
+$route['baybayin-keyboard']           	= 'Main/baybayinkeyboard_view';
+$route['spanish-keyboard']           	= 'Main/spanishkeyboard_view';
+$route['swedish-keyboard']           	= 'Main/swedishkeyboard_view';
+$route['turkish-keyboard']           	= 'Main/turkishkeyboard_view';
+
 $route['combine-words']           		= 'Main/combinewords_view';
 $route['sentence-counter']           	= 'Main/sentencecounter_view';
 $route['paragraph-counter']           	= 'Main/paragraphcounter_view';
 $route['line-counter']           		= 'Main/linecounter_view';
-
+$route['reverse-text-generator']        = 'Main/reverse_text_generator_view';
 
 	$route['about']           			= 'Main/aboutPage';
 	$route['contact']         			= 'Main/contactPage';

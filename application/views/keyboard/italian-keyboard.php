@@ -3,7 +3,7 @@
 <head>
     <title>Italian Keyboard</title>
     <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content="italian keyboard, italian virtual keyboard, italian keyboard online, italian onscreen keyboard, type italian online, type italian letters online, type in italian online, type italian, type italian keyboard, italian typing, writing italian, type in italian, italian letters, italian keyboard layout, google italian, italy keyboard">
     
 
     <?php
@@ -19,7 +19,7 @@
           <div class="container">
                 <div class="main-keyboard-title">
                   <h1>Italian Keyboard</h1>
-                  <p>Italian Keyboard Description</p>
+                  <p>Ukrainian Keyboard Description</p>
                 </div>  
 
                 <div class="main-keyboard-wrapper">
@@ -622,7 +622,7 @@
                         </div>
                         <div class="italian-keyboard">
                             <div class="row">
-                                <div class="key" data-key="`"><small>`</small><p>`</p></div>
+                                <div class="key" data-key="`"><small>`</small><p>\</p></div>
                                 <div class="key" data-key="1"><small>1</small><p>1</p></div>
                                 <div class="key" data-key="2"><small>2</small><p>2</p></div>
                                 <div class="key" data-key="3"><small>3</small><p>3</p></div>
@@ -671,7 +671,7 @@
                                 <div class="key" data-key="l"><small>l</small><p>l</p></div>
                                 <div class="key" data-key=";"><small>;</small><p>ò</p></div>
                                 <div class="key" data-key="'"><small>'</small><p>à</p></div>
-                                <div class="key extra-wide" data-key="Enter">Enter</div>
+                                <div class="key extra-wide enter" data-key="Enter">Enter</div>
                             </div>
                             <div class="row">
                                 <div class="key wide extra-shift shift" data-key="Shift">Shift</div>
@@ -684,7 +684,7 @@
                                 <div class="key" data-key="m"><small>m</small><p>m</p></div>
 
                                 <div class="key" data-key=","><small>,</small><p>,</p></div>
-                                <div class="key" data-key="."><small>.</small><p>。</p></div>
+                                <div class="key" data-key="."><small>.</small><p>.</p></div>
                                 <div class="key" data-key="/"><small>/</small><p>-</p></div>
                                 <div class="key wide shift" data-key="Shift">Shift</div>
                             </div>
@@ -695,7 +695,7 @@
                                 <div class="key extra-wide space" data-key="Space">Space</div>
                                 <div class="key wide" data-key="AltGr">AltGr</div>
                                 <div class="key esc" data-key="Esc">Esc</div>
-                                <div class="key wide" data-key="Ctrl">Ctrl</div>
+                                <div class="key wide ctrl" data-key="Ctrl">Ctrl</div>
                             </div>
                         </div>
                       </div>

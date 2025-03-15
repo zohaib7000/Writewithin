@@ -3,7 +3,7 @@
 		<div class="footer-col40">
 			<img src="<?= base_url('assets/images/logo.png'); ?>" width="300" height="65">
 			<p>
-				Translate English letters or words into Korean Language. A project of <a href="<?=('https://teqnowebs.com/')?>"><strong>Teqno Webs</strong></a> 
+				Many of the Keyboards and Texttools a project of <a href="<?=('https://teqnowebs.com/')?>"><strong>Teqno Webs</strong></a> 
 			</p>
 			<ul>
 				<li><a href="<?=base_url('blog')?>">Blog</a></li>

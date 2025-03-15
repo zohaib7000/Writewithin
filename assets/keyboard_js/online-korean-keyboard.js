@@ -974,47 +974,47 @@ $(document).ready(function() {
 
 
 $(document).ready(function() {
-	$('.backspace').on('click', function() {
-	    var inputText = $('.inputText_keyboard');
-	    var currentText = inputText.val();
-	    inputText.val(currentText.slice(0, -1));
-	});
+  $('.backspace').on('click', function() {
+      var inputText = $('.inputText_keyboard');
+      var currentText = inputText.val();
+      inputText.val(currentText.slice(0, -1));
+  });
 
-	$('.enter').on('click', function() {
-	    var inputText = $('.inputText_keyboard');
-	    inputText.val(inputText.val() + '\n');
-	});
+  $('.enter').on('click', function() {
+      var inputText = $('.inputText_keyboard');
+      inputText.val(inputText.val() + '\n');
+  });
 
-	let visibleIndex = 0;
-	const visibleCount = 5; 
+  let visibleIndex = 0;
+  const visibleCount = 5; 
 
-	function updateBoxVisibility() {
-	  let allEmojis = $('.all-emojis div');
-	  allEmojis.each(function(index) {
-	    if (index >= visibleIndex && index < visibleIndex + visibleCount) {
-	      $(this).show();
-	    } else {
-	      $(this).hide();
-	    }
-	  });
-	}
+  function updateBoxVisibility() {
+    let allEmojis = $('.all-emojis div');
+    allEmojis.each(function(index) {
+      if (index >= visibleIndex && index < visibleIndex + visibleCount) {
+        $(this).show();
+      } else {
+        $(this).hide();
+      }
+    });
+  }
 
-	updateBoxVisibility();
+  updateBoxVisibility();
 
-	$('.up').click(function() {
-	  if (visibleIndex > 0) {
-	    visibleIndex--;
-	    updateBoxVisibility();
-	  }
-	});
+  $('.up').click(function() {
+    if (visibleIndex > 0) {
+      visibleIndex--;
+      updateBoxVisibility();
+    }
+  });
 
-	$('.down').click(function() {
-	  let allEmojis = $('.all-emojis div');
-	  if (visibleIndex + visibleCount < allEmojis.length) {
-	    visibleIndex++;
-	    updateBoxVisibility();
-	  }
-	});
+  $('.down').click(function() {
+    let allEmojis = $('.all-emojis div');
+    if (visibleIndex + visibleCount < allEmojis.length) {
+      visibleIndex++;
+      updateBoxVisibility();
+    }
+  });
 
 });
 $(document).ready(function () {

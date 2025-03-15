@@ -7,6 +7,12 @@ body{
     font-family: 'Montserrat', sans-serif;
     line-height: 25px;
 }
+
+.placeholder-div:empty::before {
+    content: "Enter text here...(ReadOnly)";
+    color: gray;
+    font-style: italic;
+}
 .writewithin-homepage-template{
     width: 100%;
     padding: 20px 0;
@@ -251,7 +257,8 @@ h1{
 .keyboard,
 .keyboard-sebeolsik,
 .keyboard-hanja,
-.chinese-keyboard{
+.chinese-keyboard,
+.ukrainian-keyboard{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -334,11 +341,8 @@ h1{
     width: 160px;
 }
 .container{
-    width: 100%;
-    max-width: 1170px;
-    padding: 0 10px 0;
+    width: 1170px;
     margin: auto;
-    height: auto;
 }
 .clear{
     clear: both;
@@ -715,12 +719,6 @@ h1{
     left: 0;
     top: 0;
 }
-.shift:hover{
-    background-color: #007bff; 
-    color: #000;
-    transition: 0.3s;
-}
-
 .writewithin-pages h2, .plblog_sec h2{
     font-weight: 500;
     font-size: 22px;
@@ -801,6 +799,8 @@ h1{
 .dark_mode .faq-question p{
     color: #fff;
 }
+
+
 @media only screen and (max-width: 980px) {
     #writewithme-content {
         width: 100%;
@@ -822,6 +822,7 @@ h1{
 @media only screen and (max-width: 880px) {
     .keyboard-setting{
         height: auto;
+        padding: 10px 0;
     }
     .keyboard{
         padding: 10px;
@@ -834,27 +835,35 @@ h1{
         padding: 10px;
     }
     .key{
-        width: 60px;
+        width: 50px;
+        height: 50px;
+    }
+    .key small, .sebe small, .hanja small, .c-key small{
+        top: -8px;
     }
     .wide, .ctrl, .backspace, .esc, .extra-wide{
         width: 105px !important;
     }
     .row{
         flex-wrap: wrap;
-        margin-bottom: 5px;
         justify-content: space-between;
+        gap: 2px;
+    }
+    .key p, .sebe p, .hanja p, .c-key p{
+        font-size: 14px;
     }
     .keyboard{
         display: inline-block;
     }
-}
-@media only screen and (max-width: 820px) {
-    .main-keyboard-box textarea{
-        width: 100%;
-        height: 120px;
-        margin: 10px 0;
+    .keyboard, .keyboard-sebeolsik, .keyboard-hanja, .chinese-keyboard, .ukrainian-keyboard{
+        padding: 10px 0;
     }
-} 
+    .inputText_keyboard{
+        font-size: 15px;
+        padding: 10px;
+        border-radius: 4px;
+    }
+}
 @media only screen and (max-width: 786px) {
 
     .textbtn-solid,
@@ -877,6 +886,10 @@ h1{
 @media only screen and (max-width: 1170px) {
     .main-keyboard-wrapper{
         width: 100%;
+    }
+    .container{
+        width: auto;
+        padding: 10px;
     }
 }
 @media only screen and (max-width: 680px) {
@@ -930,9 +943,7 @@ h1{
 
 }
 @media only screen and (max-width: 520px){
-    .main-keyboard-box textarea{
-        height: 150px;
-    }
+
     .writewithin-wrapper ul{
         justify-content: center;
     }

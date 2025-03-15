@@ -1,0 +1,189 @@
+.main-reverse-text-template{
+    width: 100%;
+    padding: 20px 0;
+}
+.main-reverse-text-title{
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+.main-reverse-text-title h1{
+    font-size: 30px;
+    margin: 0;
+    padding: 10px;
+}
+.dark_mode .main-reverse-text-title h1 {
+    color: #fff;
+}
+.dark_mode .main-reverse-text-template{
+    background-color: #000;
+}
+.dark_mode .checkbox-linecounter{
+    color: #fff;
+}
+.main-reverse-text-title p{
+    font-size: 16px;
+    display: block;
+    margin-bottom: 15px;
+}
+.dark_mode .main-reverse-text-title p{
+    color: #fff;
+}
+.main-reverse-text-wrapper{
+    width: 80%;
+    background-color: rgb(214 214 214 / 10%);
+    padding: 20px;
+    border-radius: 4px;
+    margin: auto;
+    border: 1px solid #d6d6d6;
+}
+.reverse-text-input{
+    margin-bottom: 10px;
+}
+.reverse-text-input textarea{
+    width: 100%;
+    max-height: 120px;
+    min-height: 120px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    outline: none;
+}
+#copyIcon{
+    text-align: right;
+}
+.reverse-text-btn{
+    text-align: center;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+.reverse-text-uploadbox{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.reverse-text-btn button{
+    font-size: 12px;
+    padding: 7px 15px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    background: linear-gradient(118deg, rgb(61 29 122) 20%, rgb(29 152 148) 50%);
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 2px;
+}
+.reverse-text-output{
+    width: 100%;
+    background-color: #0000001a;
+}
+.reverse-text-output #result p{
+    padding: 5px 10px;
+}
+.reverse-text-output textarea{
+    width: 100%;
+    max-height: 100px;
+    min-height: 100px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #CCC;
+    border-radius: 10px;
+    outline: none;
+}
+.dark_mode .main-reverse-text-box textarea{
+    background-color: #fff;
+    border: 1px solid #000;
+    color: #000;
+}
+.main-reverse-text-box textarea::placeholder {
+    font-size: 13px;
+}
+.reverse-result{
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #d6d6d6;
+    margin-bottom: 10px;
+    text-align: center;
+}
+#lineNumbers{
+    
+    background-color: #fff;
+}
+#lineNumbers ol{
+    border: 1px solid #d6d6d6;
+    list-style-position: inside;
+    padding: 10px;
+}
+#outputText{
+    display: block;
+}
+.reverse-file-input {
+    position: relative;
+    display: inline-block;
+}
+.reverse-text-uploadbox{
+    margin-bottom: 10px;
+}
+.file-label ,
+.clearAllBtn{
+    display: inline-block;
+    padding: 4px 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.3s;
+    text-transform: uppercase;
+    border: 1px solid #007bff;
+    color: #fff;
+}
+
+.file-label:hover {
+    background-color: #0056b3;
+}
+
+.reverse-file-input input[type="file"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    left: 0;
+    top: 0;
+}
+@media only screen and (max-width: 880px) {
+    .main-reverse-text-wrapper{
+        width: 100%;
+        padding: 10px;
+    }
+
+}
+@media only screen and (max-width: 680px) {
+    .reverse-text-input{
+
+    }
+    .reverse-text-input textarea{
+        padding: 10px;
+        max-height: 150px;
+        min-height: 150px;
+    }
+    .reverse-text-output textarea{
+        width: 100%;
+        padding: 10px;
+        max-height: 150px;
+        min-height: 150px;
+    }
+    .reverse-text-output{
+        text-align: center;
+    }
+
+}

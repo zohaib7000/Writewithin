@@ -3,50 +3,48 @@ $(document).ready(function () {
     let shiftActive = false; 
     let shiftHoverActive = false; 
     let ctrlActive = false;
-    // ctrl Key Mapping
+
     const ctrlMap = {
-        "e": "€", "'": "^", "ì":"î", "è": "[", "ò": "@", ",": "«", "。": "»", "-": "°", "à": "#", "ù": "§"
+        "2": "«", "г": "ґ",
     };
-    // ESC Key Mapping
+
     const escMap = {
-        "è": "[", "'": "-", "ì": "=", "+": "]", "ò" : ";", "à" : "'", "ù": "\\", "-" : "/",
+       "'": "-", "¡": "=", "`":"[", "+" : "]", "ç": "\\", "ñ": ";", "-": "/", "'": "´", "º": "`", "`": "`"
     };
 
-    // Shift Key Mapping (When Esc is active)
     const shiftMap = {
-        "a": "A", "b": "B", "c": "C", "d": "D", "e": "E", "f": "F", "g": "G", "h": "H", "i": "I", "j": "J",
-        "k": "K", "l": "L", "m": "M", "n": "N", "o": "O", "p": "P", "q": "Q", "r": "R", "s": "S", "t": "T",
-        "u": "U", "v": "V", "w": "W", "x": "X", "y": "Y", "z": "Z",
+        "й": "Q", "ц": "W", "у": "E", "к": "R", "е": "T", "н": "Y", "г": "U", "ш": "I", "щ": "O", "з": "P",
+        "х": "[", "ї": "]", "ф": "A", "і": "S", "в": "D", "а": "F", "п": "G", "р": "H", "о": "J",
+        "л": "K", "д": "L", "я": "Z", "ч": "X", "с": "C", "м": "V", "и": "B","\\": "|",".":"?","`":"~",
+        "т": "N", "ь": "M", "ж": ":", "є": '"', "б": "<", "ю": ">","х": '{', "ї": "}","-":"_", "=": "+",
+
         "1": "!", "2": "@", "3": "#", "4": "$", "5": "%", "6": "^", "7": "&", "8": "*", "9": "(", "0": ")",
-        "-": "_", "+": "=", "è": "{", "+": "}", "|": "\\", "<": ",", ">": ".", "?": "/", "\\": "~","'": "_",
-        "ì" : "+", "ù" : "|", ",": "<", ".": ">", "-": '?',"ò": ':', "à": '"',
+        "-": "_", "+": "=", "è": "{", "+": "}", "|": "\\",
     };
 
-    // Shift Only Mapping (When Shift is active and Esc is FALSE)
     const shiftOnlyMap = {
-        "2": '"', "@": '"',  "\\": "|", "3": "£", "1": "!", "4": "$", "5": "%", "6": "^", "7": "/", "8": "(", "9": ")",
+         "2": '"', "@": '"',  "\\": "|", "3": "·", "1": "!", "4": "$", "5": "%", "6": "^", "7": "/", "8": "(", "9": ")",
         "]": "*", "0" : "=", "'" : "?", "ì": "í", "è": "é", "+": "*", "ò" : "ç", "à": "ó",",": ";", ".": ":", 
         "-": "_","ù": "ú",
+        
         "a": "A", "b": "B", "c": "C", "d": "D", "e": "E", "f": "F", "g": "G", "h": "H", "i": "I", "j": "J",
         "k": "K", "l": "L", "m": "M", "n": "N", "o": "O", "p": "P", "q": "Q", "r": "R", "s": "S", "t": "T",
         "u": "U", "v": "V", "w": "W", "x": "X", "y": "Y", "z": "Z",
+
     };
     
-    // Toggle ctrl Key
     function toggleCtrl() {
         ctrlActive = !ctrlActive; 
         updateKeyLabels();
         updateBackgroundColors();
     }
 
-    // Toggle ESC Key
     function toggleEsc() {
         escActive = !escActive; 
         updateKeyLabels();
         updateBackgroundColors();
     }
 
-    // Toggle Shift Key
     function toggleShift() {
         shiftActive = !shiftActive; 
         shiftHoverActive = false; 
@@ -54,7 +52,6 @@ $(document).ready(function () {
         updateBackgroundColors();
     }
 
-    // Hover Shift Key (Applies ShiftOnlyMap when Esc is false, ShiftMap when Esc is active)
     function hoverShift(active) {
         shiftHoverActive = active;
         updateKeyLabels();
@@ -72,23 +69,18 @@ $(document).ready(function () {
             }
 
             if (ctrlActive && ctrlMap[originalChar]) {
-                // Show the Ctrl-mapped character if Ctrl is active
                 $key.find("p").text(ctrlMap[originalChar]).show();
             } 
             else if (ctrlActive && !ctrlMap[originalChar]) {
-                // If no mapping exists in ctrlMap, remove the <p> content
                 $key.find("p").text("").hide();
             }
             else if (escActive && shiftActive && shiftMap[originalChar]) {
-                // When both ESC and Shift are active, use shiftMap for ESC key
                 $key.find("p").text(shiftMap[originalChar]).show();
             } 
             else if (escActive && !shiftActive && escMap[originalChar]) {
-                // When ESC is active but Shift is not, use escMap
                 $key.find("p").text(escMap[originalChar]).show();
             } 
             else if (escActive && (shiftActive || shiftHoverActive) && shiftMap[originalChar]) {
-                // Shift + ESC combination
                 $key.find("p").text(shiftMap[originalChar]).show();
             } 
             else if (!escActive && (shiftActive || shiftHoverActive) && shiftOnlyMap[originalChar]) {
@@ -100,32 +92,28 @@ $(document).ready(function () {
         });
     }
 
-
+    
     $(".key").on("click", function (event) {
         let $key = $(this);
         let originalChar = $key.attr("data-char");
 
         if (ctrlActive && ctrlMap[originalChar]) {
-            // Prevent the mapped character from appearing in inputText_keyboard
-            event.preventDefault(); // Stops default action
-            event.stopPropagation(); // Stops event bubbling
+            event.preventDefault(); 
+            event.stopPropagation(); 
 
-            // Keep Ctrl active initially
             ctrlActive = true;
             updateKeyLabels();
             updateBackgroundColors();
 
-            // Reset Ctrl mode AFTER updating UI
             setTimeout(() => {
                 ctrlActive = false;
                 updateKeyLabels();
                 updateBackgroundColors();
-            }, 1); // Small delay to allow UI update
+            }, 1); 
 
-            return; // Stop further execution, so nothing gets inserted
+            return; 
         }
 
-        // Insert text only if Ctrl is not active
         if (!ctrlActive) {
             let keyText = $key.find("p").text();
             $(".inputText_keyboard").append(keyText);
@@ -133,13 +121,11 @@ $(document).ready(function () {
     });
 
 
-    // Update background colors for active keys
     function updateBackgroundColors() {
         $(".key.esc").css("background-color", escActive ? "yellow" : "transparent");
         $(".key.shift").css("background-color", (shiftActive || shiftHoverActive) ? "yellow" : "transparent");
     }
 
-    // ESC Key Events
     $(".key.esc").on("click", toggleEsc);
     $(document).on("keydown", function (event) {
         if (event.key === "Escape") {
@@ -148,7 +134,6 @@ $(document).ready(function () {
         }
     });
 
-    // Shift Key Events
     $(".key.shift").on("click", toggleShift);
     $(".key.ctrl").on("click", toggleCtrl);
 
@@ -176,14 +161,20 @@ $(document).ready(function () {
         }
     });
 
-    // Key Click & Input Handling
     $(".key").on("click", function () {
         let charToInsert = $(this).find("p").text();
         insertChar(charToInsert);
     });
 
     $(document).on("keydown", function (event) {
-        let keyPressed = event.key;
+        let keyPressed = event.key.toLowerCase();
+        
+        if (event.ctrlKey) {
+            if (["a", "c", "v", "x", "z"].includes(keyPressed)) {
+                return; 
+            }
+        }
+
         if (keyPressed === "\\") keyPressed = "\\\\";
 
         let $keyElement = $('.key[data-key="' + keyPressed + '"]');
@@ -193,6 +184,7 @@ $(document).ready(function () {
             event.preventDefault();
         }
     });
+
 
     function insertChar(charToInsert) {
         let $input = $(".inputText_keyboard");
@@ -204,85 +196,12 @@ $(document).ready(function () {
               .prop("selectionStart", cursorPos + charToInsert.length)
               .prop("selectionEnd", cursorPos + charToInsert.length);
     }
-
-$(document).on("keydown", function (event) {
-    let keyPressed = event.key;
-    let $input = $(".inputText_keyboard");
-
-    // Handle Backspace
-    if (keyPressed === "Backspace") {
-        event.preventDefault();
-        let text = $input.val();
-        let cursorPos = $input.prop("selectionStart");
-
-        if (cursorPos > 0) {
-            $input.val(text.slice(0, cursorPos - 1) + text.slice(cursorPos))
-                  .focus()
-                  .prop("selectionStart", cursorPos - 1)
-                  .prop("selectionEnd", cursorPos - 1);
-        }
-        return;
-    }
-
-    // Handle Enter
-    if (keyPressed === "Enter") {
-        event.preventDefault();
-        let cursorPos = $input.prop("selectionStart");
-        let text = $input.val();
-
-        $input.val(text.slice(0, cursorPos) + "\n" + text.slice(cursorPos))
-              .focus()
-              .prop("selectionStart", cursorPos + 1)
-              .prop("selectionEnd", cursorPos + 1);
-        return;
-    }
-
-    // Handle Ctrl + A (Select all)
-    if (event.ctrlKey && keyPressed.toLowerCase() === "a") {
-        event.preventDefault(); 
-        $input.focus().select();
-        return;
-    }
-    if (event.ctrlKey) {
-        let lowerKey = keyPressed.toLowerCase();
-
-        if (["c", "v", "x"].includes(lowerKey)) {
-            return; // Allow normal copy, paste, cut behavior
-        }
-
-        if (keyPressed === "Control" || keyPressed === "Ctrl") {
-            event.preventDefault(); // Prevent unintended behavior
-        }
-        return;
-    }
-
-    // Handle key visual for pressed key
-    $('.key[data-key="' + keyPressed + '"]').addClass("active");
 });
-
-$(document).on("keyup", function (event) {
-    let keyReleased = event.key;
-    $('.key[data-key="' + keyReleased + '"]').removeClass("active");
-});
-
-
-
-});
-$(document).ready(function () {
-    $('.emojibtn').on('click', function () {
-        $('.emoji').show();
-        $('.italian-keyboard').hide();
-    });
-
-    $('.abc').on('click', function () {
-        $('.emoji').hide();
-        $('.italian-keyboard').show();
-    });
-
-    $(document).on('click', '.all-emojis p', function () {
-        var emoji = $(this).text();
-        var $input = $('.inputText_keyboard');
-
+ $(document).ready(function() {
+    $(document).on('click', '.all-emojis p', function() {
+        var emoji = $(this).text(); 
+        var $input = $('.inputText_keyboard'); 
+        
         if ($input.is('input, textarea')) {
             let cursorPos = $input.prop("selectionStart");
             let text = $input.val();
@@ -295,8 +214,19 @@ $(document).ready(function () {
             $input.append(emoji);
         }
     });
-});
- $(document).ready(function() {
+
+    
+
+    $('.emojibtn').on('click', function(){
+        $('.emoji').show();
+        $('.ukrainian-keyboard').hide();
+    });
+
+    $('.abc').on('click', function(){
+        $('.emoji').hide();
+        $('.ukrainian-keyboard').show();
+    });
+
     let textInput = $('.inputText_keyboard');
     let fontSize = 16;
     let history = [""];  
@@ -315,7 +245,7 @@ $(document).ready(function () {
 
         setTimeout(() => {
             $(this).text(originalText);
-        }, 2000); // Reset after 2 seconds
+        }, 2000);
     });
 
     $('.undoBtn').click(function() {
@@ -334,7 +264,7 @@ $(document).ready(function () {
 
     $('.clearAllBtn').click(function() {
         textInput.val('');
-        history = [""];  // Reset history
+        history = [""];  
         historyIndex = 0;
     });
 
@@ -357,7 +287,7 @@ $(document).ready(function () {
         let blob = new Blob([text], { type: 'text/plain' });
         let link = $('<a>')
             .attr('href', URL.createObjectURL(blob))
-            .attr('download', 'italian_language.txt')
+            .attr('download', 'ukrainian_language.txt')
             .appendTo('body');
 
         link[0].click();
@@ -396,7 +326,7 @@ $(document).ready(function () {
         let imageData = canvas.toDataURL('image/png');
         let link = document.createElement('a');
         link.href = imageData;
-        link.download = 'italian_language.png';
+        link.download = 'ukrainian_language.png';
         link.click();
     });
 
@@ -461,5 +391,7 @@ $(document).ready(function () {
       updateBoxVisibility();
     }
   });
-
 });
+
+
+  
